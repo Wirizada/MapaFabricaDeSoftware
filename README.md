@@ -1,6 +1,6 @@
 # 📚 Sistema Web de Biblioteca
 
-Este projeto é uma aplicação web simples para gerenciamento de livros, desenvolvida como atividade acadêmica para a Universidade Cesumar.
+Este projeto é uma aplicação web simples para gerenciamento de livros, desenvolvida como atividade acadêmica para a Universidade Unicesumar.
 
 O sistema permite cadastrar, listar e excluir livros de um acervo, utilizando tecnologias fundamentais do ecossistema Java para Web.
 
