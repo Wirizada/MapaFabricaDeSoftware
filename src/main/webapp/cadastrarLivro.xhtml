@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<h:head>
+    <title>Cadastro de Livro - Biblioteca Cesumar</title>
+    <style type="text/css">
+        body { font-family: Arial, sans-serif; }
+        .form-container { width: 500px; margin: auto; border: 1px solid #ccc; padding: 20px; border-radius: 5px; }
+        .form-row { margin-bottom: 10px; }
+        .form-row label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-row input { width: 95%; padding: 8px; border: 1px solid #ccc; border-radius: 3px;}
+        .error-message { color: red; margin-bottom: 15px; font-weight: bold; }
+        .button { padding: 10px 15px; background-color: #0056b3; color: white; border: none; cursor: pointer; border-radius: 3px; }
+    </style>
+</h:head>
+<h:body>
+    <div class="form-container">
+        <h2>Cadastro de Novo Livro</h2>
+
+        <h:outputText value="#{requestScope.erro}" styleClass="error-message" rendered="#{not empty requestScope.erro}" />
+
+        <form action="livroServlet" method="post">
+            <input type="hidden" name="acao" value="cadastrar" />
+
+            <div class="form-row">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" />
+            </div>
+
+            <div class="form-row">
+                <label for="autor">Autor:</label>
+                <input type="text" id="autor" name="autor" />
+            </div>
+
+            <div class="form-row">
+                <label for="ano">Ano de Publicação:</label>
+                <input type="text" id="ano" name="anoPublicacao" />
+            </div>
+
+            <div class="form-row">
+                <label for="isbn">ISBN:</label>
+                <input type="text" id="isbn" name="isbn" />
+            </div>
+
+            <button type="submit" class="button">Cadastrar Livro</button>
+        </form>
+        <br/>
+        <a href="livroServlet?acao=listar">Ver Lista de Livros</a>
+    </div>
+</h:body>
+</html>
